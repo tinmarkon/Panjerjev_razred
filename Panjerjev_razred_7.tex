@@ -57,22 +57,22 @@ $(\Rightarrow)$ Sedaj predpostavimo, da obstajata taki realni števili a in b, d
 \\[1.5mm] Ker mora biti $p_k \geq 0$ za $\forall k \in \mathbb{N} \Rightarrow a+b \geq 0$.
 \begin{enumerate}
 	
-	\item \textbf{$a+b=0$}:\\ $$p_1 = p_0(a+b)=0=p_2=p_3= \ldots =p_k$$ Ker mora veljati $$1 = \sum_{k=0}^{\infty}p_k,$$sledi $p_0=1$ in tako dobimo Diracovo maso v točki 0.
+	\item \textbf{$a+b=0$}:\\ $$p_1 = p_0(a+b)=0=p_2=p_3= \ldots =p_k.$$ Ker mora veljati $$1 = \sum_{k=0}^{\infty}p_k,$$sledi $p_0=1$ in tako dobimo Diracovo maso v točki 0.
 	
 	\item \textbf{$a+b>0$}: 
 	\begin{itemize}
-		\item $0<a<1$:  Določimo novo spremenljivko $\alpha=\frac{a+b}{a},$ sledi $ b=a(\alpha-1),$ \\ $$p_1=p_0(a+b)=p_0 a \alpha,$$  $$p_2=p_1(a+\frac{b}{2})=p_1a(\frac{\alpha}{2}+\frac{1}{2})=p_0a^2\alpha(\alpha + 1) \frac{1}{2},$$  $$\vdots$$  $$p_k=p_0a^k\frac{1}{k!}\frac{(\alpha+k-1)!}{(\alpha-1)!}=p_0 a^k \binom{\alpha+k-1}{k}.$$ \\\ {Veljati mora $$\sum_{k=0}^{\infty}p_k=\sum_{k=0}^{\infty}\binom{\alpha+k-1}{k}p_0a^k=p_0\sum_{k=0}^{\infty}\binom{\alpha+k-1}{k}a^k=1$$ Velja tudi: \\ $$\binom{\alpha+k-1}{k}=\frac{(\alpha+k-1)(\alpha+k-2)\ldots(\alpha+k-(k-1))(\alpha+k-k)(\alpha-1)!}{k!(\alpha-1)!}=$$ \\ $$=(-1)^k\frac{(-\alpha)(-\alpha-1)\ldots(-\alpha-k+1)}{k!}=(-1)^k\binom{-\alpha}{k}$$ \\ Torej je: \\ $$p_0\sum_{k=0}^{\infty}\binom{\alpha+k-1}{k}a^k=p_0\sum_{k=0}^{\infty}\binom{-\alpha}{k}(-1)^ka^k=p_0\sum_{k=0}^{\infty}\binom{-\alpha}{k}(-a)^k=p_0(1+(-a))^{-\alpha}$$ \\ $$p_0=(1-a)^{\alpha}$$ \\ Od tod dobimo negativno binomsko porazdelitev.}
+		\item $0<a<1$:  Določimo novo spremenljivko $\alpha=\frac{a+b}{a},$ sledi $ b=a(\alpha-1),$ \\ $$p_1=p_0(a+b)=p_0 a \alpha,$$  $$p_2=p_1(a+\frac{b}{2})=p_1a(\frac{\alpha}{2}+\frac{1}{2})=p_0a^2\alpha(\alpha + 1) \frac{1}{2},$$  $$\vdots$$  $$p_k=p_0a^k\frac{1}{k!}\frac{(\alpha+k-1)!}{(\alpha-1)!}=p_0 a^k \binom{\alpha+k-1}{k}.$$ \\\ {Veljati mora $$\sum_{k=0}^{\infty}p_k=\sum_{k=0}^{\infty}\binom{\alpha+k-1}{k}p_0a^k=p_0\sum_{k=0}^{\infty}\binom{\alpha+k-1}{k}a^k=1.$$ Velja tudi: \\ $$\binom{\alpha+k-1}{k}=\frac{(\alpha+k-1)(\alpha+k-2)\ldots(\alpha+k-(k-1))(\alpha+k-k)(\alpha-1)!}{k!(\alpha-1)!}=$$ \\ $$=(-1)^k\frac{(-\alpha)(-\alpha-1)\ldots(-\alpha-k+1)}{k!}=(-1)^k\binom{-\alpha}{k}.$$ \\ Torej je: \\ $$p_0\sum_{k=0}^{\infty}\binom{\alpha+k-1}{k}a^k=p_0\sum_{k=0}^{\infty}\binom{-\alpha}{k}(-1)^ka^k=p_0\sum_{k=0}^{\infty}\binom{-\alpha}{k}(-a)^k=p_0(1+(-a))^{-\alpha},$$ \\ kjer smo upoštevali binomsko vrsto in dejstvo, da je $|a|<1.$ Iz tega sledi enakost $p_0=(1-a)^{\alpha}.$ Od tod dobimo negativno binomsko porazdelitev.}
 
 		\item a = 0: Velja $p_k = p_{k-1} \frac{b}{k}$. Če razpišemo, dobimo:
 		$$ \begin{array}{c}
-		p_1 = p_0 b \\[1.5mm]
-		p_2 = p_0 \frac{b^2}{2} \\[1.5mm]
+		p_1 = p_0 b, \\[1.5mm]
+		p_2 = p_0 \frac{b^2}{2}, \\[1.5mm]
 		\ldots \\[1.5mm]
-		p_k = p_0 \frac{b^k}{k!}
+		p_k = p_0 \frac{b^k}{k!}.
 		\end{array} $$
-		Ker mora veljati
+		Ker mora veljati \\
 $$
-		\sum_{k=0}^{n} p_k = 1 \rightarrow \sum_{k=0}^{\infty} p_0 \frac{b^k}{k!} = p_0 \sum_{k=0}^{\infty} \frac{b^k}{k!} = p_0 e^b = 1 \rightarrow p_0 = e^{-b} \rightarrow p_k = e^{-b} \frac{b^k}{k!},$$ kar pa je ravno 			Poissonova porazdelitev s parametrom b.
+		\sum_{k=0}^{n} p_k = 1, \text{ sledi }  \sum_{k=0}^{\infty} p_0 \frac{b^k}{k!} = p_0 \sum_{k=0}^{\infty} \frac{b^k}{k!} = p_0 e^b = 1.$$ Torej velja enakost $p_0 = e^{-b} \text{ in } p_k = e^{-b} \frac{b^k}{k!},$ kar pa je ravno Poissonova porazdelitev s parametrom b.
 
 		\item  a < 0:
 			\begin{math}
@@ -81,17 +81,17 @@ $$
 			\lim_{k \to \infty} (a + \frac{b}{k}) = a < 0
 			\end{math}, iz česar sledi, da obstaja tak N $\in \mathbb{N}$, da velja $a + \frac{b}{N + 1} = 0$ (vsi členi od nekega N dalje so enaki 0, ker mora biti verjetnostna masna funkcija nenegativna). Če izrazimo $b$, dobimo $b = -a(N+1)$. To vstavimo v Panjerjevo zvezo $p_k = p_{k-1} (a + \frac{b}{k})$:
 			$$ \begin{array}{c}
-			p_1 = p_0 (a - a(N+1)) = p_0 a (-1) N \\[1.5mm]
-			p_2 = p_1 (a - a \frac{N+1}{2}) = p_0 a^2 \frac{1}{2} (-1)^2 N (N-1) \\[1.5mm]
+			p_1 = p_0 (a - a(N+1)) = p_0 a (-1) N, \\[1.5mm]
+			p_2 = p_1 (a - a \frac{N+1}{2}) = p_0 a^2 \frac{1}{2} (-1)^2 N (N-1), \\[1.5mm]
 			\vdots \\[1.5mm]
-			p_k = p_0 a^k \frac{1}{k!} N (N-1) \cdots (N - k + 1) (-1)^k\\[1.5mm] = p_0 a^k \frac{1}{k!} \frac{N!}{(N-k)!} (-1)^k = p_0 (-a)^k \binom{N}{k}
+			p_k = p_0 a^k \frac{1}{k!} N (N-1) \cdots (N - k + 1) (-1)^k\\[1.5mm] = p_0 a^k \frac{1}{k!} \frac{N!}{(N-k)!} (-1)^k = p_0 (-a)^k \binom{N}{k}.
 			\end{array} $$
 			
 Vemo, da mora veljati 
 $$
 \sum_{k=0}^{\infty} p_k = 1 \rightarrow \sum_{k=0}^{N} \binom{N}{k} p_0 (-a)^k = p_0 \sum_{k=0}^{N} \binom{N}{k} (-a)^k = p_0 (1-a)^N = 1 \rightarrow p_0 = (1-a)^{-N} .$$ (Uporabili smo binomski izrek.) \\[1.5mm]
 Če vstavimo $a = \frac{-p}{1-p}$ dobimo: \\[1.5mm]
-$p_k = \binom{N}{k} (1+ \frac{p}{1-p})^{-N} (\frac{p}{1-p})^k = \binom{N}{k} (\frac{1}{1-p})^{-N} \frac{p^k}{(1-p)^k} = \binom{N}{k}(1-p)^{N-k} p^k$ \\[1.5mm]
+$p_k = \binom{N}{k} (1+ \frac{p}{1-p})^{-N} (\frac{p}{1-p})^k = \binom{N}{k} (\frac{1}{1-p})^{-N} \frac{p^k}{(1-p)^k} = \binom{N}{k}(1-p)^{N-k} p^k$, \\[1.5mm]
 kar pa je ravno binomska porazdelitev.
 	 \end{itemize}
 \end{enumerate}
