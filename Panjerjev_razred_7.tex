@@ -46,22 +46,22 @@ $$p_k = p_{k-1}(a + \frac{b}{k}), \hspace{0.25cm}  k \in \mathbb{N}.$$
 \section{Rešitev}
 $(\Leftarrow)$ Najprej predpostavimo, da so Diracova masa v 0, Poissonova porazdelitev, negativna binomska porazdelitev ter binomska porazdelitev v Panjerjevem razredu. Iščemo taki realni števili a in b, da bo veljala enakost $p_k = p_{k-1}(a + \frac{b}{k}).$
 \begin{enumerate}
-	\item{$p_1=p_0(a + b) = 0 = p_2 = p_3 = \ldots = p_k, \hspace{0.25cm} \forall k \in \mathbb{N},$ sledi $a + b = 0, a=-b$}
-	\item{$\frac{p_k}{p_{k-1}}=\frac{\lambda^k e^{-\lambda}(k-1)!}{\lambda^{k-1} e^{-\lambda}k!} = \frac{\lambda}{k}, $ sledi $ a = 0, b = \lambda$} 
-	\item{Ker velja $\Gamma(\alpha)=(\alpha-1)!$  za $\forall \alpha \in \mathbb{R}$, in $\Gamma(\alpha+1)=\alpha\Gamma(\alpha)$ za $\forall \alpha > 0,$ velja \\[1.5mm] ${n +\alpha - 1 \choose n} = \frac{(n+\alpha-1)!}{n!(\alpha-1)!}=\frac{\Gamma(n+\alpha)}{n!\Gamma(\alpha)}.$ \\[1.5mm] $\frac{p_n}{p_{n-1}}=\frac{\binom{n + \alpha - 1}{n}p^n(1-p)^{\alpha}}{\binom{n-1+\alpha-1}{n-1}p^{n-1}(1-p)^\alpha}=\ldots=\frac{\Gamma(\alpha+n)}{n\Gamma(\alpha+n-1)}p=\frac{(\alpha+n-1)\Gamma(\alpha+n-1)}{n\Gamma(\alpha+n-1)}p= \\[1.5mm] p+p(\alpha-1)\frac{1}{n}, $ sledi $ a=p, b=p(\alpha-1)$}
-	\item{$\frac{p_n}{p_{n-1}}=\frac{\binom{N}{n}p^n(1-p)^{N-n}}{\binom{N}{n-1}p^{n-1}(1-p)^{N-n+1}}=\ldots=\frac{p}{1-p}(N+1)\frac{1}{n}-\frac{p}{1-p}, $ sledi $ a= \\[1.5mm] -\frac{p}{1-p}, b = \frac{p}{1-p}(N+1)$}
+	\item{$p_1=p_0(a + b) = 0 = p_2 = p_3 = \ldots = p_k, \hspace{0.25cm} \forall k \in \mathbb{N}.$ Ker velja $p_1=0$ in $p_0 \neq 0,$ sledi $a + b = 0,$ torej $a=-b.$}
+	\item{$\frac{p_k}{p_{k-1}}=\frac{\lambda^k e^{-\lambda}(k-1)!}{\lambda^{k-1} e^{-\lambda}k!} = \frac{\lambda}{k}, $ sledi $ a = 0, b = \lambda.$} 
+	\item{Ker velja $\Gamma(n)=(n-1)!$  za $\forall n \in \mathbb{N}$ in $\Gamma(\alpha+1)=\alpha\Gamma(\alpha)$ za $\forall \alpha > 0,$ velja \\[1.5mm] ${n +\alpha - 1 \choose n} = \frac{(n+\alpha-1)!}{n!(\alpha-1)!}=\frac{\Gamma(n+\alpha)}{n!\Gamma(\alpha)}.$ \\[1.5mm] $\frac{p_n}{p_{n-1}}=\frac{\binom{n + \alpha - 1}{n}p^n(1-p)^{\alpha}}{\binom{n-1+\alpha-1}{n-1}p^{n-1}(1-p)^\alpha}=\ldots=\frac{\Gamma(\alpha+n)}{n\Gamma(\alpha+n-1)}p=\frac{(\alpha+n-1)\Gamma(\alpha+n-1)}{n\Gamma(\alpha+n-1)}p= \\[1.5mm] p+p(\alpha-1)\frac{1}{n}, $ sledi $ a=p, b=p(\alpha-1).$}
+	\item{$\frac{p_n}{p_{n-1}}=\frac{\binom{N}{n}p^n(1-p)^{N-n}}{\binom{N}{n-1}p^{n-1}(1-p)^{N-n+1}}=\ldots=\frac{p}{1-p}(N+1)\frac{1}{n}-\frac{p}{1-p}, $ sledi $ a= \\[1.5mm] -\frac{p}{1-p}, b = \frac{p}{1-p}(N+1).$}
 \end{enumerate}
 
 \pagebreak
 $(\Rightarrow)$ Sedaj predpostavimo, da obstajata taki realni števili a in b, da velja enakost $p_k = p_{k-1}(a + \frac{b}{k}).$ Dokazati moramo, da je $p$ v Panjerjevem razredu, če je Diracova masa v 0, Poissonova porazdelitev, negativna binomska porazdelitev ali binomska porazdelitev.
-\\[1.5mm] Ker mora biti $p_k \geq 0$ za $\forall k \in \mathbb{N} \Rightarrow a+b \geq 0$.
+\\[1.5mm] Ker mora biti $p_k \geq 0$ za $\forall k \in \mathbb{N} \Rightarrow a+b \geq 0$. Obravnavajmo vsak primer posebej.
 \begin{enumerate}
 	
 	\item \textbf{$a+b=0$}:\\ $$p_1 = p_0(a+b)=0=p_2=p_3= \ldots =p_k.$$ Ker mora veljati $$1 = \sum_{k=0}^{\infty}p_k,$$sledi $p_0=1$ in tako dobimo Diracovo maso v točki 0.
 	
 	\item \textbf{$a+b>0$}: 
 	\begin{itemize}
-		\item $0<a<1$:  Določimo novo spremenljivko $\alpha=\frac{a+b}{a},$ sledi $ b=a(\alpha-1),$ \\ $$p_1=p_0(a+b)=p_0 a \alpha,$$  $$p_2=p_1(a+\frac{b}{2})=p_1a(\frac{\alpha}{2}+\frac{1}{2})=p_0a^2\alpha(\alpha + 1) \frac{1}{2},$$  $$\vdots$$  $$p_k=p_0a^k\frac{1}{k!}\frac{(\alpha+k-1)!}{(\alpha-1)!}=p_0 a^k \binom{\alpha+k-1}{k}.$$ \\\ {Veljati mora $$\sum_{k=0}^{\infty}p_k=\sum_{k=0}^{\infty}\binom{\alpha+k-1}{k}p_0a^k=p_0\sum_{k=0}^{\infty}\binom{\alpha+k-1}{k}a^k=1.$$ Velja tudi: \\ $$\binom{\alpha+k-1}{k}=\frac{(\alpha+k-1)(\alpha+k-2)\ldots(\alpha+k-(k-1))(\alpha+k-k)(\alpha-1)!}{k!(\alpha-1)!}=$$ \\ $$=(-1)^k\frac{(-\alpha)(-\alpha-1)\ldots(-\alpha-k+1)}{k!}=(-1)^k\binom{-\alpha}{k}.$$ \\ Torej je: \\ $$p_0\sum_{k=0}^{\infty}\binom{\alpha+k-1}{k}a^k=p_0\sum_{k=0}^{\infty}\binom{-\alpha}{k}(-1)^ka^k=p_0\sum_{k=0}^{\infty}\binom{-\alpha}{k}(-a)^k=p_0(1+(-a))^{-\alpha},$$ \\ kjer smo upoštevali binomsko vrsto in dejstvo, da je $|a|<1.$ Iz tega sledi enakost $p_0=(1-a)^{\alpha}.$ Od tod dobimo negativno binomsko porazdelitev.}
+		\item $a>0$:  Določimo novo spremenljivko $\alpha=\frac{a+b}{a},$ sledi $ b=a(\alpha-1).$ \\ $$p_1=p_0(a+b)=p_0 a \alpha,$$  $$p_2=p_1(a+\frac{b}{2})=p_1a(\frac{\alpha}{2}+\frac{1}{2})=p_0a^2\alpha(\alpha + 1) \frac{1}{2},$$  $$\vdots$$  $$p_k=p_0a^k\frac{1}{k!}\frac{(\alpha+k-1)!}{(\alpha-1)!}=p_0 a^k \binom{\alpha+k-1}{k}.$$ \\\ {Veljati mora $$\sum_{k=0}^{\infty}p_k=\sum_{k=0}^{\infty}\binom{\alpha+k-1}{k}p_0a^k=p_0\sum_{k=0}^{\infty}\binom{\alpha+k-1}{k}a^k=1.$$ Velja tudi: \\ $$\binom{\alpha+k-1}{k}=\frac{(\alpha+k-1)(\alpha+k-2)\ldots(\alpha+k-(k-1))(\alpha+k-k)(\alpha-1)!}{k!(\alpha-1)!}=$$ \\ $$=(-1)^k\frac{(-\alpha)(-\alpha-1)\ldots(-\alpha-k+1)}{k!}=(-1)^k\binom{-\alpha}{k}.$$ \\ Torej je: \\ $$p_0\sum_{k=0}^{\infty}\binom{\alpha+k-1}{k}a^k=p_0\sum_{k=0}^{\infty}\binom{-\alpha}{k}(-1)^ka^k=p_0\sum_{k=0}^{\infty}\binom{-\alpha}{k}(-a)^k=p_0(1+(-a))^{-\alpha},$$ \\ kjer smo upoštevali binomsko vrsto in dejstvo, da je $|a|<1.$ \\ Za $|a|>1$ binomska vrsta ne konvergira, torej mora biti $a<1$ (ker smo na intervalu $a \in (0, \infty)$). \\ Iz zgornje enačbe sledi enakost $p_0=(1-a)^{\alpha}.$ Od tod dobimo negativno binomsko porazdelitev.}
 
 		\item a = 0: Velja $p_k = p_{k-1} \frac{b}{k}$. Če razpišemo, dobimo:
 		$$ \begin{array}{c}
@@ -89,7 +89,7 @@ $$
 			
 Vemo, da mora veljati 
 $$
-\sum_{k=0}^{\infty} p_k = 1 \rightarrow \sum_{k=0}^{N} \binom{N}{k} p_0 (-a)^k = p_0 \sum_{k=0}^{N} \binom{N}{k} (-a)^k = p_0 (1-a)^N = 1 \rightarrow p_0 = (1-a)^{-N} .$$ (Uporabili smo binomski izrek.) \\[1.5mm]
+\sum_{k=0}^{\infty} p_k = 1, \text{sledi} \sum_{k=0}^{N} \binom{N}{k} p_0 (-a)^k = p_0 \sum_{k=0}^{N} \binom{N}{k} (-a)^k = p_0 (1-a)^N = 1.$$ Torej je $p_0 = (1-a)^{-N} .$ (Uporabili smo binomski izrek.) \\[1.5mm]
 Če vstavimo $a = \frac{-p}{1-p}$ dobimo: \\[1.5mm]
 $p_k = \binom{N}{k} (1+ \frac{p}{1-p})^{-N} (\frac{p}{1-p})^k = \binom{N}{k} (\frac{1}{1-p})^{-N} \frac{p^k}{(1-p)^k} = \binom{N}{k}(1-p)^{N-k} p^k$, \\[1.5mm]
 kar pa je ravno binomska porazdelitev.
