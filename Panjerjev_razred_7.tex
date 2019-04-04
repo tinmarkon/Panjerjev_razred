@@ -39,7 +39,7 @@ $$p_k = p_{k-1}(a + \frac{b}{k}), \hspace{0.25cm}  k \in \mathbb{N}.$$
 \begin{enumerate}
 	\item $p_n = \delta_{0}(n)$ \textit{(Diracova masa v 0).}
 	\item $p_n = \frac{\lambda^n}{n!}e^{-\lambda}$ \textit{za nek $\lambda \in (0, \infty)$ (Poissonova porazdelitev).}
-	\item $p_n = {{\alpha + n - 1}\choose n}p^n(1-p)^{\alpha}$ \textit{za neka $\alpha \in (0, \infty), p \in (0,1) \\ $(Tu je ${{\alpha + n - 1}\choose n}$ posplošeni binomski simbol, ki se izraža ${{\alpha + n - 1}\choose n}=\frac{\Gamma(\alpha + n)}{\Gamma(n+1)\Gamma(\alpha)}$.}
+	\item $p_n = {{\alpha + n - 1}\choose n}p^n(1-p)^{\alpha}$ \textit{za neka $\alpha \in (0, \infty), p \in (0,1) \\ $(Tu je ${{\alpha + n - 1}\choose n}$ posplošeni binomski simbol, ki se izraža ${{\alpha + n - 1}\choose n}=\frac{\Gamma(\alpha + n)}{\Gamma(n+1)\Gamma(\alpha)}.)$}
 	\item $p_n = {N \choose n}p^n(1-p)^{N-n}$ \textit{za neka $p \in (0,1), N \in \mathbb{N}$ (binomska porazdelitev).}
 \end{enumerate}
 \vspace{0.5cm}
@@ -48,7 +48,7 @@ $(\Leftarrow)$ Najprej predpostavimo, da so Diracova masa v 0, Poissonova porazd
 \begin{enumerate}
 	\item{$p_1=p_0(a + b) = 0 = p_2 = p_3 = \ldots = p_k, \hspace{0.25cm} \forall k \in \mathbb{N},$ sledi $a + b = 0, a=-b$}
 	\item{$\frac{p_k}{p_{k-1}}=\frac{\lambda^k e^{-\lambda}(k-1)!}{\lambda^{k-1} e^{-\lambda}k!} = \frac{\lambda}{k}, $ sledi $ a = 0, b = \lambda$} 
-	\item{Ker velja $\Gamma(n)=(n-1)!$  za $\forall n \in \mathbb{N}$, in $\Gamma(\alpha+1)=\alpha\Gamma(\alpha)$ za $\forall \alpha > 0,$ velja \\[1.5mm] ${n +\alpha - 1 \choose n} = \frac{(n+\alpha-1)!}{n!(\alpha-1)!}=\frac{\Gamma(n+\alpha)}{n!\Gamma(\alpha)}.$ \\[1.5mm] $\frac{p_n}{p_{n-1}}=\frac{\binom{n + \alpha - 1}{n}p^n(1-p)^{\alpha}}{\binom{n-1+\alpha-1}{n-1}p^{n-1}(1-p)^\alpha}=\ldots=\frac{\Gamma(\alpha+n)}{n\Gamma(\alpha+n-1)}p=\frac{(\alpha+n-1)\Gamma(\alpha+n-1)}{n\Gamma(\alpha+n-1)}p= \\[1.5mm] p+p(\alpha-1)\frac{1}{n}, $ sledi $ a=p, b=p(\alpha-1)$}
+	\item{Ker velja $\Gamma(\alpha)=(\alpha-1)!$  za $\forall \alpha \in \mathbb{R}$, in $\Gamma(\alpha+1)=\alpha\Gamma(\alpha)$ za $\forall \alpha > 0,$ velja \\[1.5mm] ${n +\alpha - 1 \choose n} = \frac{(n+\alpha-1)!}{n!(\alpha-1)!}=\frac{\Gamma(n+\alpha)}{n!\Gamma(\alpha)}.$ \\[1.5mm] $\frac{p_n}{p_{n-1}}=\frac{\binom{n + \alpha - 1}{n}p^n(1-p)^{\alpha}}{\binom{n-1+\alpha-1}{n-1}p^{n-1}(1-p)^\alpha}=\ldots=\frac{\Gamma(\alpha+n)}{n\Gamma(\alpha+n-1)}p=\frac{(\alpha+n-1)\Gamma(\alpha+n-1)}{n\Gamma(\alpha+n-1)}p= \\[1.5mm] p+p(\alpha-1)\frac{1}{n}, $ sledi $ a=p, b=p(\alpha-1)$}
 	\item{$\frac{p_n}{p_{n-1}}=\frac{\binom{N}{n}p^n(1-p)^{N-n}}{\binom{N}{n-1}p^{n-1}(1-p)^{N-n+1}}=\ldots=\frac{p}{1-p}(N+1)\frac{1}{n}-\frac{p}{1-p}, $ sledi $ a= \\[1.5mm] -\frac{p}{1-p}, b = \frac{p}{1-p}(N+1)$}
 \end{enumerate}
 
